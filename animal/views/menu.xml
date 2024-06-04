@@ -1,0 +1,36 @@
+<odoo>
+
+    <!-- Main Menu -->
+    <menuitem
+        id="root"
+        name="Contratos"
+        action="action_animal"
+        sequence="10"
+        web_icon="animal,static/description/icon.png"
+    />
+    <menuitem
+        id="animal"
+        name="Katubihotz"
+        action="action_animal"
+        sequence="10"
+        parent="root"
+    />
+    <menuitem
+        id="config"
+        name="Configuration"
+        sequence="100"
+        parent="root"
+    />
+
+    <!-- Configuration -->
+    <menuitem id="settings" name="Settings" sequence="10" parent="config" />
+
+    <menuitem
+        id="color"
+        name="Colors"
+        action="action_animal_color"
+        sequence="40"
+        parent="config"
+    />
+
+</odoo>

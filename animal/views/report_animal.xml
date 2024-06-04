@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <template id="report_animal">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <style type="text/css">
+                            table {border:solid 1px;
+                            border-collapse: collapse;
+                            border-color: #A61C00}
+
+                            tr {border:solid 1px;
+                            border-collapse: collapse;
+                            border-color: #A61C00}
+
+                            td {border:solid 1px;
+                            border-collapse: collapse;
+                            border-color: #A61C00;
+                            padding-left: 10px;
+                            padding-top: 2px;}
+                        </style>
+                        <div class="page">
+<!--                            HEADER-->
+                            <div class="row" style="font-size:12px">
+                                <div>
+                                    <ul>
+                                        <strong>
+                                            <li style="list-style-type:none">CUOTA DE ADOPCIÓN: 40€ (80€ con chip)</li>
+                                        </strong>
+                                        <li style="list-style-type:square">Únete a nuestro grupo Teaming por 1 eurito al
+                                            mes.
+                                        </li>
+                                        <li style="list-style-type:none">-https://www.teaming.net/katubihotz</li>
+                                        <li style="list-style-type:square">Hazte socio realizando una aportación mínima
+                                            de 5 euros
+                                            al mes:
+                                        </li>
+                                        <li style="list-style-type:none">Cuenta Kutxa: IBAN ES11 2095 5093 5010 6436
+                                            9514
+                                        </li>
+                                        <li style="list-style-type:square">Colabora con donativos puntuales:</li>
+                                        <li style="list-style-type:none">➡ Bizum: En la opción DONAR, poniendo Katubihotz en el</li>
+                                        <li style="list-style-type:none">buscador. Código 00529 o teléfono 651605444</li>
+                                        <li style="list-style-type:none">➡ Paypal: Katubihotz@hotmail.com</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"
+                                         alt="Logo" height="200" width="175"/>
+                                </div>
+                                <div>
+                                    <br/>
+                                    <ul>
+                                        <li style="list-style-type:square">Regálanos alguna de las cositas de nuestra
+                                            lista de deseos de
+                                            Amazon:
+                                        </li>
+                                        <li style="list-style-type:none">- Puedes ver la lista en la sección COLABORA
+                                            de nuestra web:</li>
+                                        <li style="list-style-type:none">www.katubihotz.com/colabora</li>
+                                        <li style="list-style-type:square">Compra en nuestra tienda Online:</li>
+                                        <li style="list-style-type:none">www.katubihotz.com/katutienda-online/</li>
+                                        <li style="list-style-type:square">Dona arena, comida, empapadores, productos de</li>
+                                        <li style="list-style-type:none">limpieza, mantas, juguetes para gato, etc.
+                                        </li>
+                                        <li style="list-style-type:none"><strong>¡Gracias a vosotros podemos seguir ayudándoles!</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--END HEADER-->
+                            <br/>
+                            <h3>DATOS DEL ANIMAL</h3>
+                            <div id="informations" class="row mt-4 mb-2" style="font-size:18px">
+                                <div class="col-auto col-3 mw-100 mb-2" name="name">
+                                    <strong>NOMBRE</strong>
+                                    <p class="m-0" t-field="o.name"/>
+                                </div>
+                                <div class="col-auto col-3 mw-100 mb-2" name="n_contrato">
+                                    <strong>Nº CONTRATO</strong>
+                                    <!--<p><span class="m-0" t-field="o.contract_number"/><span>/</span><span t-esc="datetime.date.today().strftime('%y')"/></p>-->
+                                    <p><span class="m-0" t-field="o.contract_number_year"/></p>
+                                </div>
+                            </div>
+                            <div class="row ml-1">
+                                <table width="65%">
+                                    <tr>
+                                        <td width="52%" style="background-color:#ffb0a4"><span><b>SEXO</b></span></td>
+                                        <td><span t-field="o.gender"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>PELAJE</b></span></td>
+                                        <td><span t-field="o.fur"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>COLOR</b></span></td>
+                                        <td><span t-field="o.color_id.name"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>FECHA NACIMIENTO</b></span></td>
+                                        <td><span t-field="o.birth_date"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>EDAD</b></span></td>
+                                        <td><span t-field="o.years_old"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>FECHA ADOPCION</b></span></td>
+                                        <td><span t-field="o.adoption_date"/></td>
+                                    </tr>
+                                </table>
+                                <div style="display: inline; padding-left:50px">
+                                    <img t-if="o.image" t-att-src="image_data_uri(o.image)" alt="Image" height="200" width="200"/>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row ml-1">
+                                <table width="100%">
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>DESPARASITADO/A</b></span></td>
+                                        <td>
+                                            <input type="checkbox" value="si" t-att-checked="o.despa == 'si'"/>
+                                            <label for="si">SI</label>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="no" t-att-checked="o.despa == 'no'"/>
+                                            <label for="no">NO</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>VACUNADO/A </b></span></td>
+                                        <td>
+                                            <input type="checkbox" value="si" t-att-checked="o.vacuna == 'si'"/>
+                                            <label for="si">SI</label>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="no" t-att-checked="o.vacuna == 'no'"/>
+                                            <label for="no">NO</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="34%" style="background-color:#ffb0a4" colspan="1" rowspan="3">
+                                            <strong>
+                                                <p>LEUCEMIA FELINA(VLFe)</p>
+                                                <span>INMUNODEFICIENCIA FELINA (VIF)</span>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="si" t-att-checked="o.leuc == 'si'"/>
+                                            <label for="si">Positivo</label>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="no" t-att-checked="o.leuc == 'no'"/>
+                                            <label for="no">Negativo</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="si" t-att-checked="o.inmuno == 'si'"/>
+                                            <label for="si">Positivo</label>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="no" t-att-checked="o.inmuno == 'no'"/>
+                                            <label for="no">Negativo</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>ESTERILIZADO/A </b></span></td>
+                                        <td>
+                                            <input type="checkbox" value="si" t-att-checked="o.ester == 'si'"/>
+                                            <label for="si">SI</label>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="no" t-att-checked="o.ester == 'no'"/>
+                                            <label for="no">NO</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#ffb0a4"><span><b>TIENE CHIP </b></span></td>
+                                        <td>
+                                            <input type="checkbox" value="si" t-att-checked="o.chip == 'si'"/>
+                                            <label for="si">SI</label>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" value="no" t-att-checked="o.chip == 'no'"/>
+                                            <label for="no">NO</label>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <br/>
+                            <br/>
+                            <h3>DATOS DEL ADOPTANTE</h3>
+                            <table style="border:none" width="100%">
+                                <tr style="border:none">
+                                    <td style="border:none"><strong>NOMBRE COMPLETO</strong></td>
+                                    <td style="border:none"></td>
+                                </tr>
+                                <tr style="border:none">
+                                    <td style="border:none"><strong>DNI</strong></td>
+                                    <td style="border:none"></td>
+                                </tr>
+                                <tr style="border:none">
+                                    <td style="border:none"><strong>DIRECCIÓN</strong></td>
+                                    <td style="border:none"></td>
+                                </tr>
+                                <tr style="border:none">
+                                    <td width="40%" style="border:none"><strong>POBLACIÓN</strong></td>
+                                    <td style="border:none"></td>
+                                    <td style="border:none"><strong>CÓDIGO POSTAL</strong></td>
+                                    <td style="border:none"></td>
+                                </tr>
+                                <tr style="border:none">
+                                    <td style="border:none"><strong>TELÉFONO</strong></td>
+                                    <td style="border:none"></td>
+                                    <td style="border:none"><strong>E-MAIL</strong></td>
+                                    <td style="border:none"></td>
+                                </tr>
+                                <tr style="border:none">
+                                    <td style="border:none"><strong>¿CÓMO NOS HAS CONOCIDO?</strong></td>
+                                    <td style="border:none"></td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <p>Compareciendo de una parte, D./Dña ________________________________________________, mayor de edad, en su propio nombre y Derecho, con DNI ________________ y con teléfono __________________, en adelante el/la Adoptante.<br/>
+                                Y, de otra parte,
+                                <t t-if="o.firma">
+                                    Dña Ainhoa Permuy, mayor de edad, en representación de la Asociación Katubihotz, con CIF G7506251, domiciliada en San Sebastián Kalea Nº1, Pasaia (CP 20110), y con teléfono 613002246, en adelante la Asociación.
+                                </t>
+                                <t t-else="">
+                                    D./Dña______________________________________________, mayor de edad, en representación de la Asociación Katubihotz, con CIF G7506251, domiciliada en San Sebastián Kalea Nº1, Pasaia (CP 20110), y con teléfono 613002246, en adelante la Asociación.
+                                </t>
+                            </p>
+
+                            <div style="page-break-before: always;">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            <ol>
+                                <li>Aceptar que el responsable por éste efectúe las <b>visitas de control</b> que considere necesarias, comprobado su estado de salud y bienestar, bastando para ello la notificación telefónica, por mail o carta, y con al menos 7 días de antelación. A su vez, el responsable se reservará el derecho a decidir si la vivienda del adoptante es <b>apta</b> o no para el animal.</li>
+                                <li>Mantener <b>actualizada la información</b> para el responsable. El adoptante deberá notificar los cambios de domicilio, extravío, fallecimiento o pérdida del animal, en un máximo de <b>48 horas</b>.</li>
+                                <li><b>Informar</b> de inmediato al responsable si las circunstancias de la adopción del animal cambian, renunciando expresamente a venderlo, regalarlo, o cederlo a un tercero, y por supuesto a sacrificarlo, abandonarlo o ingresarlo en un refugio o perrera sin <b>consentimiento del responsable</b>. En caso de <b>no poder seguir con la adopción</b> el adoptante se compromete a tenerlo <b>acogido</b> hasta que el responsable le consiga otro hogar de acogida o adopción.</li>
+                                <li>En caso de <b>fallecimiento del Adoptante</b> tendrán preferencia los familiares del propio adoptante o las personas cercanas que conviviesen con el mismo. Dicha persona deberá ponerse en contacto con la Asociación en un plazo máximo de 7 días naturales siguientes al fallecimiento y notificar su voluntad de celebrar un nuevo contrato. En caso de que las personas anteriormente mencionadas no deseen subrogarse, la Asociación asumirá de nuevo su posesión.</li>
+                                <li><b>Velar por su salud física y psicológica</b>, de acuerdo con las leyes de protección animal vigentes. <b>NO</b> lo maltratará ni tolerará malos tratos de <b>terceras personas</b>.<br/>
+                                    • <b>En ningún caso</b> el animal podrá permanecer <b>aislado ni encerrado</b> en jaulas, habitaciones, balcones, patios o garajes.<br/>
+                                    • Tampoco podrá permanecer en un lugar donde no pueda <b>resguardarse</b> o sin espacio suficiente para llevar a cabo sus necesidades básicas.<br/>
+                                    • A su vez proporcionar al animal la <b>alimentación y bebida adecuada y suficiente</b>, los cuidados de <b>higiene</b> necesarios. El animal debe ser querido y respetado.</li>
+                                <li>Proporcionarle la <b>atención veterinaria necesaria</b> ante cualquier problema de salud presente tras su adopción.<br/>
+                                    • En caso de no estar esterilizado por motivos de salud o por no alcanzar la edad adecuada (cachorros) en el plazo máximo de un año se procederá a su esterilización, la <b>esterilización</b> será <b>OBLIGATORIA</b>.<br/>
+                                    • En caso de ignorar la norma y preñar el animal o usarlo para cría, la asociación reclamará inmediatamente la devolución del mismo. <b>PROHIBICIÓN ABSOLUTA DE CRIAR CON EL ANIMAL ADOPTADO</b>.<br/>
+                                    • En ningún caso será permitida la <b>desungulación</b> (operación con el fin de amputar las uñas al gato).<br/>
+                                    • <b>NO se permite el uso de collares con cascabel</b> debido al daño que su sonido continuo causa en los oídos del animal y al estrés innecesario que les provoca.</li>
+                                <li>Reconocer que en este acto <b>NO</b> se realiza ningún tipo de contrato de <b>compra-venta</b> de animales, y que este documento firmado tiene dos objetivos: En primer lugar, salvar la vida del animal; y en segundo lugar darle al animal una <b>calidad de vida óptima y digna</b>.</li>
+                                <li>Reconocer que queda informado además de que cualquier <b>incumplimiento</b> de los apartados anteriores supondrá la <b>devolución</b> del animal al responsable o persona autorizada por éste, pudiendo de este modo requisarlo temporalmente mientras se comprueba el cumplimiento de las obligaciones asumidas por el adoptante y si fuera necesario podrá interponer una denuncia ante los organismos oficiales competentes de la provincia.</li>
+                                <li>La Asociación Katubihotz entrega al animal con todos los procedimientos veterinarios necesarios hasta su fecha de adopción, por lo que el Adoptante se compromete a pagar la cantidad de <b>40€ (80€ con chip)</b> como una pequeña aportación de los gastos incurridos en el veterinario.</li>
+                            </ol>
+                                <br></br>
+                                <br></br>
+                                <div style="text-align:center;"><p>EN PASAIA, A ____ DE __________________ DE 202__ </p></div>
+
+                                <p style="text-align: left; margin-left:15%; display: inline-block;">FIRMA ADOPTANTE</p>
+                                <p style="text-align: left; margin-left:30%; display: inline-block;">FIRMA RESPONSABLE</p>
+<!--                                firma bajo FIRMA RESPONSABLE-->
+                                <p style="text-align: left; margin-left:65%; display: inline-block;"><img t-if="o.firma" t-att-src="image_data_uri(o.partner_id.image_1920)" height="60" width="120"/></p>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="action_report_animal" model="ir.actions.report">
+            <field name="name">Contrato</field>
+            <field name="model">animal</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">animal.report_animal</field>
+            <field name="report_file">animal.report_animal</field>
+            <field name="print_report_name">'Contrato %s de %s' % (object.contract_number,object.name)</field>
+            <field name="binding_model_id" ref="model_animal"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
+
