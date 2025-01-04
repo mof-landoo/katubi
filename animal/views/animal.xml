@@ -10,7 +10,6 @@
                     <field name="name"/>
                     <field name="gender"/>
                     <field name="color_id"/>
-                    <field name="years_old" optional="hide"/>
                     <field name="firma" optional="hide"/>                
                     <field name="contract_number_year" optional="show"/>
                 </tree>
@@ -62,10 +61,10 @@
                             </group>
                         </group>
                         <group>
-                            <group id="dates" string="Fechas">
-                                <field name="years_old"/>
+                            <group id="dates" string="Datos Katubihotz">
+                                <field name="katubi_name"/>
                                 <field name="birth_date"/>
-                                <field name="adoption_date"/>
+                                <field name="paid_chip"/>
                             </group>
 
                             <group id="owner" string="Owner">

@@ -37,16 +37,17 @@ class Animal(models.Model):
         ]
     )
     #weight = fields.Float(string="Weight (in kg)")
+    katubi_name = fields.Char(string="Nombre Katubihotz")
     birth_date = fields.Date(string="Fecha Nacimiento")
-    years_old = fields.Char(string="Edad")
     adoption_date = fields.Date(string="Fecha Adopción")
+    paid_chip = fields.Boolean(string="Chip pagado")
 
     despa = fields.Selection(string="Desparasitado",
                              selection=[('si','Sí'),('no','No')])
     ester = fields.Selection(string="Esterilizado",
                              selection=[('si', 'Sí'), ('no', 'No')])
     chip = fields.Selection(string="Chip",
-                             selection=[('si', 'Sí'), ('no', 'No')])
+                            selection=[('si', 'Sí'), ('no', 'No')])
     vacuna = fields.Selection(string="Vacunado",
                              selection=[('si','Sí'),('no','No')])
     leuc = fields.Selection(string="Leucemia felina",
