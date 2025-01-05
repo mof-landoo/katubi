@@ -16,6 +16,18 @@
                             </div>
                             <!--END HEADER-->
                             <br/>
+                            <div style="text-align: center;"><h4><b>CESIÓN DEL ANIMAL MEDIADA POR LA ASOCIACIÓN KATUBIHOTZ</b></h4></div>
+                            <br/>
+                            <p>
+                                <span>Yo, Dº/Dª ______________________________________________ y NIF ___________________ con domicilio en ______________________________
+                                    _______________________ Población ______________________ Provincia _______________ Cód. Postal _________ y con teléfono ____________________
+                                    y como ACTUAL DUEÑO/A DEL ANIMAL que se reseña a continuación CEDO LIBRE Y VOLUNTARIAMENTE LA PROPIEDAD DE ESTE ANIMAL a fecha de la firma de este documento
+                                    a la Asociación Katubihotz
+                                    con CIF G7506251, domiciliada en San Sebastián Kalea Nº1, Pasaia, Gipuzkoa, Cód. Postal 20110, y con teléfono
+                                    613002246 y representada por Doña Ainhoa Permuy.
+                                </span>
+                            </p>
+                            <br/>
                             <h3>DATOS DEL ANIMAL CEDIDO</h3>
                             <div id="informations" class="row mt-4 mb-2" style="font-size:18px">
                                 <div class="col-auto col-3 mw-100 mb-2" name="name">
@@ -24,21 +36,20 @@
                                 </div>
                                 <div class="col-auto col-3 mw-100 mb-2" name="n_contrato">
                                     <strong>Nº CONTRATO</strong>
-                                    <!--<p><span class="m-0" t-field="o.contract_number"/><span>/</span><span t-esc="datetime.date.today().strftime('%y')"/></p>-->
                                     <p>
                                         <span class="m-0" t-field="o.contract_number_year"/>
                                     </p>
                                 </div>
                             </div>
-
+                            <br/>
 
 <!--                            FIRMA-->
                             <div style="text-align:center;">
                                 <p>EN PASAIA, A ____ DE __________________ DE 202__</p>
                             </div>
 
-                            <p style="text-align: left; margin-left:15%; display: inline-block;">FIRMA del DUEÑO ANTERIOR</p>
-                            <p style="text-align: left; margin-left:30%; display: inline-block;">FIRMA del RESPONSABLE de KATUBIHOTZ
+                            <p style="text-align: left; margin-left:10%; display: inline-block;">FIRMA del DUEÑO ANTERIOR</p>
+                            <p style="text-align: left; margin-left:20%; display: inline-block;">FIRMA del RESPONSABLE de KATUBIHOTZ
                             </p>
                             <!--                                firma bajo FIRMA RESPONSABLE-->
                             <p style="text-align: left; margin-left:55%; display: inline-block;">
@@ -50,39 +61,6 @@
             </t>
         </template>
 
-<!--                            <div class="row text-center" style="font-size:12px">-->
-<!--                                <div class="col-8">-->
-<!--                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"-->
-<!--                                         alt="Logo" height="200" width="175"/>-->
-<!--                                </div>-->
-<!--                                <div>-->
-<!--                                    <br/>-->
-<!--                                    <p>Contrato nº <span t-esc="o.contract_number"/></p>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <br></br>-->
-<!--                            <p class="text-center"><strong>CONTRATO DE RENUNCIA MEDIADO POR LA ASOCIACIÓN KATUBIHOTZ</strong></p>-->
-<!--<div id="main_text">-->
-<!--    <span>Yo…..………………………………………………………………………………………………………………………………………………con domicilio en...…………………………………………………………………………………………………………………..………………………………………………….</span>-->
-<!--Población …………………...…………………...………Provincia…..………………………..……...………… Cód. Postal …………....……-->
-<!--N.I.F.………………...……………..…..…………..Teléfono..…………………………………………………..…………………..……….………………..-->
-
-<!--Con fecha ……...……..……..de…….………………………....……….. del 2024 y como ACTUAL DUEÑO DEL ANIMAL que se reseña a continuación CEDO LIBRE Y VOLUNTARIAMENTE LA PROPIEDAD DE ESTE ANIMAL a la Asociación Katubihotz, representada por Don/Doña...........................................con domicilio en…………….………...…………...…….Población…….....…………………………..…………Provincia……….………...……..………………..Cód.Postal……...……………....N.I.F…………………..……………..……….Teléfono…………...………..………………………………………..-->
-<!--</div>-->
-
-<!--                            <br></br>-->
-<!--                                <br></br>-->
-<!--                                <div style="text-align:center;"><p>EN PASAIA, A ____ DE __________________ DE 202__ </p></div>-->
-
-<!--                                <p style="text-align: left; margin-left:15%; display: inline-block;">FIRMA ADOPTANTE</p>-->
-<!--                                <p style="text-align: left; margin-left:30%; display: inline-block;">FIRMA RESPONSABLE</p>-->
-<!--&lt;!&ndash;                                firma bajo FIRMA RESPONSABLE&ndash;&gt;-->
-<!--                                <p style="text-align: left; margin-left:65%; display: inline-block;"><img t-att-src="image_data_uri(o.partner_id.image_1920)" height="60" width="120"/></p>-->
-<!--                        </div>-->
-<!--                    </t>-->
-<!--                </t>-->
-<!--            </t>-->
-<!--        </template>-->
 
         <record id="action_report_renuncia" model="ir.actions.report">
             <field name="name">Contrato de Renuncia</field>
