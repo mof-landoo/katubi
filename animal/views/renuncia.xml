@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <template id="report_renuncia">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <!--                            HEADER-->
+                            <div class="row">
+                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"
+                                         alt="Logo"
+                                         height="200" width="175"
+                                         style="display: block;margin-left: auto;margin-right: auto;"
+                                    />
+                            </div>
+                            <!--END HEADER-->
+                            <br/>
+                            <h3>DATOS DEL ANIMAL CEDIDO</h3>
+                            <div id="informations" class="row mt-4 mb-2" style="font-size:18px">
+                                <div class="col-auto col-3 mw-100 mb-2" name="name">
+                                    <strong>NOMBRE</strong>
+                                    <p class="m-0" t-field="o.name"/>
+                                </div>
+                                <div class="col-auto col-3 mw-100 mb-2" name="n_contrato">
+                                    <strong>Nº CONTRATO</strong>
+                                    <!--<p><span class="m-0" t-field="o.contract_number"/><span>/</span><span t-esc="datetime.date.today().strftime('%y')"/></p>-->
+                                    <p>
+                                        <span class="m-0" t-field="o.contract_number_year"/>
+                                    </p>
+                                </div>
+                            </div>
+
+
+<!--                            FIRMA-->
+                            <div style="text-align:center;">
+                                <p>EN PASAIA, A ____ DE __________________ DE 202__</p>
+                            </div>
+
+                            <p style="text-align: left; margin-left:15%; display: inline-block;">FIRMA del DUEÑO ANTERIOR</p>
+                            <p style="text-align: left; margin-left:30%; display: inline-block;">FIRMA del RESPONSABLE de KATUBIHOTZ
+                            </p>
+                            <!--                                firma bajo FIRMA RESPONSABLE-->
+                            <p style="text-align: left; margin-left:55%; display: inline-block;">
+                                <img t-if="o.firma" t-att-src="image_data_uri(o.partner_id.image_1920)" height="200" width="300"/>
+                            </p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+<!--                            <div class="row text-center" style="font-size:12px">-->
+<!--                                <div class="col-8">-->
+<!--                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)"-->
+<!--                                         alt="Logo" height="200" width="175"/>-->
+<!--                                </div>-->
+<!--                                <div>-->
+<!--                                    <br/>-->
+<!--                                    <p>Contrato nº <span t-esc="o.contract_number"/></p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <br></br>-->
+<!--                            <p class="text-center"><strong>CONTRATO DE RENUNCIA MEDIADO POR LA ASOCIACIÓN KATUBIHOTZ</strong></p>-->
+<!--<div id="main_text">-->
+<!--    <span>Yo…..………………………………………………………………………………………………………………………………………………con domicilio en...…………………………………………………………………………………………………………………..………………………………………………….</span>-->
+<!--Población …………………...…………………...………Provincia…..………………………..……...………… Cód. Postal …………....……-->
+<!--N.I.F.………………...……………..…..…………..Teléfono..…………………………………………………..…………………..……….………………..-->
+
+<!--Con fecha ……...……..……..de…….………………………....……….. del 2024 y como ACTUAL DUEÑO DEL ANIMAL que se reseña a continuación CEDO LIBRE Y VOLUNTARIAMENTE LA PROPIEDAD DE ESTE ANIMAL a la Asociación Katubihotz, representada por Don/Doña...........................................con domicilio en…………….………...…………...…….Población…….....…………………………..…………Provincia……….………...……..………………..Cód.Postal……...……………....N.I.F…………………..……………..……….Teléfono…………...………..………………………………………..-->
+<!--</div>-->
+
+<!--                            <br></br>-->
+<!--                                <br></br>-->
+<!--                                <div style="text-align:center;"><p>EN PASAIA, A ____ DE __________________ DE 202__ </p></div>-->
+
+<!--                                <p style="text-align: left; margin-left:15%; display: inline-block;">FIRMA ADOPTANTE</p>-->
+<!--                                <p style="text-align: left; margin-left:30%; display: inline-block;">FIRMA RESPONSABLE</p>-->
+<!--&lt;!&ndash;                                firma bajo FIRMA RESPONSABLE&ndash;&gt;-->
+<!--                                <p style="text-align: left; margin-left:65%; display: inline-block;"><img t-att-src="image_data_uri(o.partner_id.image_1920)" height="60" width="120"/></p>-->
+<!--                        </div>-->
+<!--                    </t>-->
+<!--                </t>-->
+<!--            </t>-->
+<!--        </template>-->
+
+        <record id="action_report_renuncia" model="ir.actions.report">
+            <field name="name">Contrato de Renuncia</field>
+            <field name="model">animal</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">animal.report_renuncia</field>
+            <field name="report_file">animal.report_renuncia</field>
+            <field name="print_report_name">'Contrato de renuncia de %s(%s)' % (object.contract_number,object.name)</field>
+            <field name="binding_model_id" ref="model_animal"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
