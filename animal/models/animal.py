@@ -33,7 +33,7 @@ class Animal(models.Model):
     fur = fields.Selection(string="Pelo",
         selection=[
             ("largo", "Largo"),
-            ("corto","Corto")
+            ("corto", "Corto")
         ]
     )
     #weight = fields.Float(string="Weight (in kg)")
@@ -71,5 +71,18 @@ class Animal(models.Model):
     image = fields.Binary(
         attachment=True, help="This field holds the photo of the animal."
     )
+
+    def create(self, vals):
+        for r in vals:
+            r['contract_number_year'] = str(r["contract_number"]) + "/" + datetime.date.today().strftime('%y')
+        return super().create(vals)
+
+    # def write(self, vals):
+
+        # r['contract_number_year'] = str(self.contract_number) + "/" + datetime.date.today().strftime('%y')
+        # return super().write(vals)
+
+
+
 
 
