@@ -72,15 +72,13 @@ class Animal(models.Model):
         attachment=True, help="This field holds the photo of the animal."
     )
 
+    @api.model_create_multi
     def create(self, vals):
-        for r in vals:
-            r['contract_number_year'] = str(r["contract_number"]) + "/" + datetime.date.today().strftime('%y')
-        return super().create(vals)
-
-    # def write(self, vals):
-
-        # r['contract_number_year'] = str(self.contract_number) + "/" + datetime.date.today().strftime('%y')
-        # return super().write(vals)
+        animals = super(Animal, self).create(vals)
+        for animal in animals:
+            if not animal['contract_number_year']:
+                animal['contract_number_year'] = str(animal["contract_number"]) + "/" + datetime.date.today().strftime('%y')
+        return animals
 
 
 
