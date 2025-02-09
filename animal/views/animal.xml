@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <tree default_order = 'contract_number'>
                     <field name="contract_number"/>
-                    <field name="name"/>
+                    <field name="katubi_name"/>
                     <field name="gender"/>
                     <field name="color_id"/>
                     <field name="firma" optional="hide"/>                
@@ -93,8 +93,13 @@
                     <field
                     name="name"
                     filter_domain="['|', ('name', 'ilike', self), ('ref', 'ilike', self)]"
-                    string="Name"
-                />
+                    string="Nombre"
+                    />
+                    <field
+                    name="contract_number"
+                    string="Nº Contrato"
+                    />
+
                 </search>
             </field>
         </record>
