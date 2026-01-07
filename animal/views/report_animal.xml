@@ -267,45 +267,45 @@
                             <h3>DATOS DEL ADOPTANTE</h3>
                             <table style="border:none" width="100%">
                                 <tr style="border:none">
-                                    <td style="border:none">
+                                    <td style="border:none; background-color:#ffffff">
                                         <strong>NOMBRE COMPLETO</strong>
                                     </td>
                                     <td style="border:none"/>
                                 </tr>
                                 <tr style="border:none">
-                                    <td style="border:none">
+                                    <td style="border:none; background-color:#ffffff">
                                         <strong>DNI</strong>
                                     </td>
                                     <td style="border:none"/>
                                 </tr>
                                 <tr style="border:none">
-                                    <td style="border:none">
+                                    <td style="border:none; background-color:#ffffff">
                                         <strong>DIRECCIÓN</strong>
                                     </td>
-                                    <td style="border:none"/>
+                                    <td style="border:none; background-color:#ffffff"/>
                                 </tr>
                                 <tr style="border:none">
-                                    <td width="40%" style="border:none">
+                                    <td width="40%" style="border:none; background-color:#ffffff">
                                         <strong>POBLACIÓN</strong>
                                     </td>
-                                    <td style="border:none"/>
-                                    <td style="border:none">
+                                    <td style="border:none; background-color:#ffffff"/>
+                                    <td style="border:none; background-color:#ffffff">
                                         <strong>CÓDIGO POSTAL</strong>
                                     </td>
-                                    <td style="border:none"/>
+                                    <td style="border:none; background-color:#ffffff"/>
                                 </tr>
                                 <tr style="border:none">
-                                    <td style="border:none">
+                                    <td style="border:none; background-color:#ffffff">
                                         <strong>TELÉFONO</strong>
                                     </td>
                                     <td style="border:none"/>
-                                    <td style="border:none">
+                                    <td style="border:none; background-color:#ffffff">
                                         <strong>E-MAIL</strong>
                                     </td>
                                     <td style="border:none"/>
                                 </tr>
                                 <tr style="border:none">
-                                    <td style="border:none">
+                                    <td style="border:none; background-color:#ffffff">
                                         <strong>¿CÓMO NOS HAS CONOCIDO?</strong>
                                     </td>
                                     <td style="border:none"/>
