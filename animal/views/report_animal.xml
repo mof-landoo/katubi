@@ -159,7 +159,7 @@
 <!--                                        </td>-->
 <!--                                    </tr>-->
                                 </table>
-                                <div style="display: inline; padding-left:50px">
+                                <div style="display: inline; padding-left:10px">
                                     <img t-if="o.image" t-att-src="image_data_uri(o.image)" alt="Image" height="300"
                                          width="300"/>
                                 </div>
