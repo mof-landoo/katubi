@@ -160,8 +160,8 @@
 <!--                                    </tr>-->
                                 </table>
                                 <div style="display: inline; padding-left:50px">
-                                    <img t-if="o.image" t-att-src="image_data_uri(o.image)" alt="Image" height="200"
-                                         width="200"/>
+                                    <img t-if="o.image" t-att-src="image_data_uri(o.image)" alt="Image" height="300"
+                                         width="300"/>
                                 </div>
                             </div>
                             <br/>
@@ -270,13 +270,13 @@
                                     <td style="border:none; background-color:#ffffff">
                                         <strong>NOMBRE COMPLETO</strong>
                                     </td>
-                                    <td style="border:none"/>
+                                    <td style="border:none; background-color:#ffffff"/>
                                 </tr>
                                 <tr style="border:none">
                                     <td style="border:none; background-color:#ffffff">
                                         <strong>DNI</strong>
                                     </td>
-                                    <td style="border:none"/>
+                                    <td style="border:none; background-color:#ffffff"/>
                                 </tr>
                                 <tr style="border:none">
                                     <td style="border:none; background-color:#ffffff">
@@ -298,17 +298,17 @@
                                     <td style="border:none; background-color:#ffffff">
                                         <strong>TELÉFONO</strong>
                                     </td>
-                                    <td style="border:none"/>
+                                    <td style="border:none; background-color:#ffffff"/>
                                     <td style="border:none; background-color:#ffffff">
                                         <strong>E-MAIL</strong>
                                     </td>
-                                    <td style="border:none"/>
+                                    <td style="border:none; background-color:#ffffff"/>
                                 </tr>
                                 <tr style="border:none">
                                     <td style="border:none; background-color:#ffffff">
                                         <strong>¿CÓMO NOS HAS CONOCIDO?</strong>
                                     </td>
-                                    <td style="border:none"/>
+                                    <td style="border:none; background-color:#ffffff"/>
                                 </tr>
                             </table>
                             <br/>
