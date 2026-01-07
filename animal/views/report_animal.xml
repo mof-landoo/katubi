@@ -14,7 +14,8 @@
                             border-collapse: collapse;
                             border-color: #A61C00}
 
-                            td {border:solid 1px;
+                            td {background-color:#ffb0a4;
+                            border:solid 1px;
                             border-collapse: collapse;
                             border-color: #A61C00;
                             height: 30px;
@@ -98,7 +99,7 @@
                             <div class="row ml-1">
                                 <table width="65%" height="40%">
                                     <tr>
-                                        <td width="52%" style="background-color:#ffb0a4">
+                                        <td width="52%" style="background-color:#ff725c">
                                             <span>
                                                 <b>SEXO</b>
                                             </span>
@@ -108,7 +109,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="background-color:#ffb0a4">
+                                        <td style="background-color:#ff725c">
                                             <span>
                                                 <b>PELAJE</b>
                                             </span>
@@ -118,7 +119,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="background-color:#ffb0a4">
+                                        <td style="background-color:#ff725c">
                                             <span>
                                                 <b>COLOR</b>
                                             </span>
@@ -128,7 +129,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="background-color:#ffb0a4">
+                                        <td style="background-color:#ff725c">
                                             <span>
                                                 <b>FECHA NACIMIENTO</b>
                                             </span>
@@ -138,7 +139,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="background-color:#ffb0a4">
+                                        <td style="background-color:#ff725c">
                                             <span>
                                                 <b>NOMBRE KATUBIHOTZ</b>
                                             </span>
@@ -148,7 +149,7 @@
                                         </td>
                                     </tr>
 <!--                                    <tr>-->
-<!--                                        <td style="background-color:#ffb0a4">-->
+<!--                                        <td style="background-color:#ff725c">-->
 <!--                                            <span>-->
 <!--                                                <b>FECHA ADOPCION</b>-->
 <!--                                            </span>-->
@@ -167,7 +168,7 @@
                             <div class="row ml-1">
                                 <table width="95%">
                                     <tr>
-                                        <td style="background-color:#ffb0a4">
+                                        <td style="background-color:#ff725c">
                                             <span>
                                                 <b>DESPARASITADO/A</b>
                                             </span>
@@ -182,7 +183,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="background-color:#ffb0a4">
+                                        <td style="background-color:#ff725c">
                                             <span>
                                                 <b>VACUNADO/A</b>
                                             </span>
@@ -197,7 +198,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td width="36%" style="background-color:#ffb0a4" colspan="1" rowspan="3">
+                                        <td width="36%" style="background-color:#ff725c" colspan="1" rowspan="3">
                                             <strong>
                                                 <p>LEUCEMIA FELINA(VLFe)</p>
                                                 <span>INMUNODEFICIENCIA FELINA (VIF)</span>
@@ -225,7 +226,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="background-color:#ffb0a4">
+                                        <td style="background-color:#ff725c">
                                             <span>
                                                 <b>ESTERILIZADO/A</b>
                                             </span>
@@ -240,7 +241,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="background-color:#ffb0a4">
+                                        <td style="background-color:#ff725c">
                                             <span>
                                                 <b>TIENE CHIP</b>
                                             </span>
